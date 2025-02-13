@@ -1,50 +1,175 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="/static/css/style.css">  <!-- Link to CSS -->
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
+
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
+
+        <div>
+            <a href="./index.html"><span class="logo">WEB-DEVELOPER</span></a>
+        </div>
+        <div>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
-        </nav>
+        </div>
+
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate developer skilled in Django, Python, and web development.</p>
-        <img src="/static/images/profile.jpg" alt="Profile Image">
-    </section>
+    <main>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of the project.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of another project.</p>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div>
+                <div>
+                    <h4 title="Hello, How are you?">Hi, There!</h4>
+                    <h2 class="hero-section__title">I'm <span>Aschille De Leon</span></h2>
+                    <p class="hero-section__desc">I am a Web Developer skilled in Frontend Technologies, such as HTML,
+                        CSS, and JavaScript, creating interactive web experiences. I'm passionate about blending design
+                        aesthetics with functionality.</p>
+                </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: yourname@example.com</p>
-        <p>GitHub: <a href="https://github.com/yourgithub">yourgithub</a></p>
-    </section>
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://facebook.com" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+                
 
-    <footer>
-        <p>&copy; 2025 My Portfolio</p>
-    </footer>
+               <!-- <div class="hero-buttons">
+                    <button class="btn btn-dark-outlined">
+                        <a href="./assets/my resume/my resume.pdf" download>Download CV</a>
+                    </button>
+                </div>-->
+            </div>
+
+            <div class="hero-img">
+                <img src="{% static 'images/profile.jpg' %}" alt="Profile Image" width="350">
+            </div>
+        </section>
+
+        <!-- About Section  -->
+        <section class="about-section" id="about">
+
+            <div class="about-img">
+                <img src="{% static 'images/profile.jpg' %}" alt="Profile Image">
+            </div>
+
+            <div class="about-content">
+                <h4>About Me</h4>
+                <h2>I am UI Designer & <br> <span>Web Developer</span></h2>
+                <p>Hello there!I'm Aschille De Leon, a third-year BSIT student at Gordon College with a passion for web development. 
+                    With past experience working on projects using PHP, Python, Angular, and Prisma, I specialize in front-end development, crafting seamless and engaging user interfaces. 
+                    I thrive on leveraging technology to solve real-world problems and continuously explore new tools to enhance my skills. 
+                    Check out some of my projects right here on my portfolio!
+                </p>
+
+                <button class="btn btn-primary">
+                    <a href="https://github.com/sekanflor" target="_blank">
+                        Know More <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </a>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <h2>My <span>Projects</span></h2>
+            <div class="projects-cards">
+                <div class="projects-card-box">
+                    <div class="projects-card-box__icons">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class="projects-card-box__desc">
+                        <h4>Ecommerce Website</h4>
+                        <p>An eCommerce website built with Angular, HTML, and CSS, featuring a modern design and interactive elements, 
+                            providing a seamless shopping experience and serving as a foundation for scalable online stores.
+                        </p>
+                    </div>
+                    <div class="projects-card-box__buttons">
+                        <button class="btn btn-dark-outlined">
+                            <a href="https://github.com/sekanflor/ecomm.git" target="_blank">View <i
+                                    class="fa-solid fa-external-link"></i></a>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact <span>ME!</span></h2>
+            <form action="">
+                <div>
+                    <input type="text" name="name" placeholder="FullName" required>
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <textarea name="message" placeholder="Type Message" rows="5"></textarea>
+                </div>
+                <div>
+                    <button class="btn btn-primary">SEND MESSAGE</button>
+                </div>
+            </form>
+            <div class="contact__github">
+                <button class="btn">
+                    <a href="https://github.com/sekanflor" target="_blank">
+                        <i class="fa-brands fa-github"></i> Github
+                    </a>
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+
 </body>
+
 </html>

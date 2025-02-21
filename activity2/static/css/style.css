@@ -1,20 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+/* Global Variables */
+:root {
+  --primary: #ff5555;
+  --primary-hover: #e43232;
+  --dark-primary: #000;
+  --dark-secondary: #1e1b1b;
+  --text-color: #0a0606;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
 /* --- General Styling --- */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #faf8f8;
     margin: 0;
     padding: 0;
 }
 
 /* --- Sidebar Styling --- */
 .sidebar {
-    background-color: #f8f9fa;
+    background-color: #830909;
     padding: 15px;
     height: 100vh;
 }
 
 .sidebar a {
-    color: #007bff;
+    color: #830909;
     text-decoration: none;
     display: block;
     padding: 10px;
@@ -22,23 +37,19 @@ body {
 }
 
 .sidebar a:hover {
-    background: #007bff;
+    background: #830909;
     color: white;
     border-radius: 5px;
 }
 
 /* --- Main Dashboard Styling --- */
-.dashboard-container {
-    padding: 20px;
-}
-
-/* --- Card Styling --- */
 .card {
-    background: white;
+    background: var(--card-bg, #ffffff); /* Default: White, but customizable */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    transition: background 0.3s ease-in-out;
 }
 
 /* --- Grid for Data Cards --- */
@@ -51,14 +62,20 @@ body {
 
 /* --- Data Cards --- */
 .data-card {
-    background: #007bff;
-    color: white;
+    background: var(--data-card-bg, #830909); /* Customizable */
+    color: var(--data-card-text, white);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     flex: 1;
     font-size: 1.2rem;
     min-width: 150px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* --- Data Card Hover Effect --- */
+.data-card:hover {
+    background: var(--data-card-hover, #a30b0b); /* Darker Red on Hover */
 }
 
 .data-value {
@@ -83,7 +100,7 @@ body {
     margin-right: 5px;
 }
 .nav-link {
-    color: #333;
+    color: #202020;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -93,4 +110,48 @@ body {
 .nav-link i {
     margin-right: 10px;
     font-size: 20px;
+}
+main {
+    background-color: #830909; /* Dark main content area */
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 20px;
+}
+/* Sidebar Styling */
+.sidebar {
+    background-color: #1a1a1a !important; /* Dark sidebar */
+    color: #c4c4c4 !important; /* Light text */
+    height: 100vh;
+    padding: 15px;
+}
+
+/* Sidebar Links */
+.sidebar .nav-link {
+    color: #c4c4c4 !important; /* Light text */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* Sidebar Icons */
+.sidebar .nav-link i {
+    font-size: 28px;
+    color: #830909 !important;
+}
+
+/* Space between each nav item */
+.sidebar .nav-item {
+    margin-bottom: 20px;
+}
+.sidebar .nav-link i {
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+.sidebar .nav-link:hover {
+    background: #830909; /* Red hover & active */
+    color: white !important;
+    border-radius: 5px;
 }

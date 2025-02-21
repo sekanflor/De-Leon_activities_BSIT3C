@@ -16,8 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dashboard/', include('dashboard.urls')),  # Ensure this is correctly included
+    path('dashboard/', include('dashboard.urls')),
+
+    # Redirect "/" to "/dashboard/"
+    path('', lambda request: redirect('/dashboard/', permanent=True)),  
 ]
+

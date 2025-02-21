@@ -1,0 +1,38 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Welcome Message -->
+    <div class="card">
+        <h2 class="section-title">Welcome to Your Dashboard</h2>
+        <p>Here's the data.</p>
+        
+        <!-- Data Cards -->
+        <div class="card-grid">
+            <div class="data-card">
+                <p class="data-value">150</p>
+                <p class="data-title">Users</p>
+            </div>
+            <div class="data-card">
+                <p class="data-value">320</p>
+                <p class="data-title">Orders</p>
+            </div>
+            <div class="data-card">
+                <p class="data-value">$12,450</p>
+                <p class="data-title">Revenue</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Data -->
+    <div class="card">
+        <h3 class="section-title">Recent Data</h3>
+        <ul class="recent-data">
+            <li> Users Count 150</li>
+            <li> Orders Count 320</li>
+            <li> Revenue Count $12,450</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="dashboard-container">
+    <!-- Welcome Message -->
+    <div class="card">
+        <h2 class="section-title">Your Reports</h2>
+        <p>Here's the data.</p>
+        
+        <!-- Data Cards -->
+        <div class="card-grid">
+            <div class="data-card">
+                <p class="data-value">0</p>
+                <p class="data-title">Reports</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Recent Data -->
+    <div class="card">
+        <h3 class="section-title">Recent Data</h3>
+        <ul class="recent-data">
+            <li> None</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
